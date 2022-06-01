@@ -5,7 +5,7 @@
         "database": "testdb",
         "host": "db2-cap-samples.de",
         "password": "SecretDb2Password",
-        "schema": "LOCALE",
+        "schema": "LOCAL",
         "port": "50000",
         "user": "db2inst1"
       }
@@ -14,9 +14,9 @@
   "migrations": {
     "db": {
       "schema": {
-        "reference": "LOCALE_REF",
-        "default": "LOCALE",
-        "clone": "LOCALE_CLONE"
+        "reference": "LOCAL_REF",
+        "default": "LOCAL",
+        "clone": "LOCAL_CLONE"
       }
     }
   },
