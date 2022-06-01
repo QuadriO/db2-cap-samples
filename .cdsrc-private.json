@@ -26,12 +26,21 @@
     "tokenurl": "https://auth.db2-cap-samples.de/oauth2/token",
     "userinfourl": "https://auth.db2-cap-samples.de/userinfo",
     "logouturl": "https://auth.db2-cap-samples.de/oauth2/sessions/logout",
-    "clientid": "db2-cap-samples",
+    "clientid": "codespace-client",
     "clientsecret": "oidcsecret",
-    "redirecttarget": "http://db2-cap-samples.de/requests",
-    "callbackurl": "https://db2-cap-samples.de/callback",
+    "redirecttarget": "http://localhost:4004",
+    "callbackurl": "http://localhost:4004/callback",
     "loginurl": "https://db2-cap-samples.de/login"
   },
+  "users": [
+    {
+      "roles": [
+        "test"
+      ],
+      "username": "test",
+      "password": "123456"
+    }
+  ],
   "ldap": {
     "url": "ldap://db2-cap-samples.de:389",
     "binddn": "cn=root",
@@ -42,5 +51,6 @@
       "displayName",
       "mail"
     ]
-  }
+  },
+  "domain": "localhost"
 }
