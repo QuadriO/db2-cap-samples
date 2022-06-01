@@ -4,5 +4,40 @@
 	},
 	"session": {
 		"secret": "secret"
+	},
+	"requires": {
+		"oidc": {
+			"issuer": "https://auth.db2-cap-samples.de/",
+			"authorizationurl": "https://auth.db2-cap-samples.de/oauth2/auth",
+			"tokenurl": "https://auth.db2-cap-samples.de/oauth2/token",
+			"userinfourl": "https://auth.db2-cap-samples.de/userinfo",
+			"logouturl": "https://auth.db2-cap-samples.de/oauth2/sessions/logout",
+			"clientid": "xxxx",
+			"clientsecret": "xxx",
+			"redirecttarget": "http://localhost:4004",
+			"callbackurl": "http://localhost:4004/callback",
+			"loginurl": "https://db2-cap-samples.de/login"
+		},
+		"users": [
+			{
+				"roles": [
+					"test"
+				],
+				"username": "test",
+				"password": "123456"
+			}
+		],
+		"ldap": {
+			"url": "ldap://db2-cap-samples.de:389",
+			"binddn": "cn=root",
+			"bindcredentials": "ldapsecret",
+			"searchbase": "ou=passport-ldapauth",
+			"searchfilter": "(uid={{username}})",
+			"searchattributes": [
+				"displayName",
+				"mail"
+			]
+		},
+		"domain": "db2-cap-samples.de"
 	}
 }
