@@ -6,3 +6,4 @@ oidc_secret: oidcsecret
 ldap_secret: ldapsecret
 ldap_organisation: db2-cap-samples
 ldap_admin_password: ldapadminsecret
+pat_token: cmFoeGFtOmdocF9iVm4ybGgyb3QxdmZWb0lzQU51Mndob3JtZXpjY1QxeFkxbUc=
