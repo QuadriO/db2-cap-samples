@@ -43,9 +43,9 @@
   ],
   "ldap": {
     "url": "ldap://db2-cap-samples.de:389",
-    "binddn": "cn=root",
-    "bindcredentials": "ldapsecret",
-    "searchbase": "ou=passport-ldapauth",
+    "binddn": "cn=admin,dc=db2-cap-samples,dc=de",
+    "bindcredentials": "ldapadminsecret",
+    "searchbase": "ou=app-user,dc=db2-cap-samples,dc=de",
     "searchfilter": "(uid={{username}})",
     "searchattributes": [
       "displayName",
