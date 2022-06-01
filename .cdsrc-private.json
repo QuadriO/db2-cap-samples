@@ -1,0 +1,46 @@
+{
+  "requires": {
+    "db2": {
+      "credentials": {
+        "database": "testdb",
+        "host": "db2-cap-samples.de",
+        "password": "SecretDb2Password",
+        "schema": "LOCALE",
+        "port": "50000",
+        "user": "db2inst1"
+      }
+    }
+  },
+  "migrations": {
+    "db": {
+      "schema": {
+        "reference": "LOCALE_REF",
+        "default": "LOCALE",
+        "clone": "LOCALE_CLONE"
+      }
+    }
+  },
+  "oidc": {
+    "issuer": "https://auth.db2-cap-samples.de/",
+    "authorizationurl": "https://auth.db2-cap-samples.de/oauth2/auth",
+    "tokenurl": "https://auth.db2-cap-samples.de/oauth2/token",
+    "userinfourl": "https://auth.db2-cap-samples.de/userinfo",
+    "logouturl": "https://auth.db2-cap-samples.de/oauth2/sessions/logout",
+    "clientid": "db2-cap-samples",
+    "clientsecret": "oidcsecret",
+    "redirecttarget": "http://db2-cap-samples.de/requests",
+    "callbackurl": "https://db2-cap-samples.de/callback",
+    "loginurl": "https://db2-cap-samples.de/login"
+  },
+  "ldap": {
+    "url": "ldap://db2-cap-samples.de:389",
+    "binddn": "cn=root",
+    "bindcredentials": "ldapsecret",
+    "searchbase": "ou=passport-ldapauth",
+    "searchfilter": "(uid={{username}})",
+    "searchattributes": [
+      "displayName",
+      "mail"
+    ]
+  }
+}
