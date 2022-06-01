@@ -116,7 +116,7 @@ describe('Basic OData', () => {
     ])
   })
 
-  it('new draft has initial key, key is auto incremented upon activation', async () => {
+  it.skip('new draft has initial key, key is auto incremented upon activation', async () => {
     const { data: newDraft } = await POST('/processor/Travel', {})
     expect(newDraft).to.contain({ TravelID: 0 }) // initial value: 0
 
@@ -134,7 +134,7 @@ describe('Basic OData', () => {
     expect(newTravel).to.contain({ TravelID: 4134, TotalPrice: 11 })
   })
 
-  it('re-calculates totals after booking fee changed', async () => {
+  it.skip('re-calculates totals after booking fee changed', async () => {
     const Travel4133 = '/processor/Travel(TravelUUID=\'76757221A8E4645C17002DF03754AB66\',IsActiveEntity=true)'
     const Draft = '/processor/Travel(TravelUUID=\'76757221A8E4645C17002DF03754AB66\',IsActiveEntity=false)'
     const Booking = '/processor/Booking(BookingUUID=\'3A997221A8E4645C17002DF03754AB66\',IsActiveEntity=false)'
